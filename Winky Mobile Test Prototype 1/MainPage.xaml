@@ -1,0 +1,54 @@
+﻿<Page
+    x:Class="Winky_Mobile_Test_Prototype_1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Winky_Mobile_Test_Prototype_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Width="1280" Height="720">
+
+    <Grid Margin="0,0,0,0" Background="White">
+        <Grid x:Name="Top_Grid"      VerticalAlignment="Top"    HorizontalAlignment="Right" Height="75"  Width="910" >
+            <Rectangle VerticalAlignment="Top" HorizontalAlignment="Left" Height="75"  Width="910" Stroke="Black" StrokeThickness="0.5" >
+                <Rectangle.Fill>
+                    <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                        <GradientStop Color="#FF174F95" Offset="0"/>
+                        <GradientStop Color="#FF1965C3" Offset="1"/>
+                    </LinearGradientBrush>
+                </Rectangle.Fill>
+            </Rectangle>
+            <Image x:Name="Top_right_Img" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="75"  Width="100" Source="/Images/Top_right.png"/>
+            <TextBlock x:Name="Title_TBlock" HorizontalAlignment="Left" Text="Winky Mobile Test " TextWrapping="Wrap" VerticalAlignment="Center" FontSize="40" Foreground="White" Margin="280,0,0,0"/>
+            <Image x:Name="Two_head_Img" HorizontalAlignment="Left" Height="111" Margin="130,0,0,0" VerticalAlignment="Top" Width="164" Source="/Images/Two_head.png"/>
+            <TextBlock x:Name="Ver_TBlock" HorizontalAlignment="Left" Margin="713,9,0,0" Text="App Version : V1.0.0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#FFFBFBFB"/>
+            <TextBlock x:Name="FW_ver_TBlock" HorizontalAlignment="Left" Margin="713,30,0,0" Text="Firmware test : V1" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+            <TextBlock x:Name="Module_TBlock" HorizontalAlignment="Left" Margin="713,50,0,0" Text="Module test : Mobile" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="White"/>
+        </Grid>
+        <Grid x:Name="Left_Grid"     VerticalAlignment="Top"    HorizontalAlignment="Left"  Height="720"  Width="370" Margin="0,100,0,0" >
+            <ScrollViewer>
+                <StackPanel>
+                    <ToggleButton x:Name="Info_Btn"             Content="Information"       Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Info_Btn_Click" />
+                    <ToggleButton x:Name="Control_Panel_Btn"    Content="Control Panel"     Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Control_Panel_Btn_Click" />
+                    <ToggleButton x:Name="Admin_Service_Btn"    Content="Admin service"     Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Admin_Service_Btn_Click" />
+                    <ToggleButton x:Name="Function_1_Btn"       Content="Function 1"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_1_Btn_Click" />
+                    <ToggleButton x:Name="Function_2_Btn"       Content="Function 2"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_2_Btn_Click" />
+                    <ToggleButton x:Name="Function_3_Btn"       Content="Function 3"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_3_Btn_Click" />
+                    <ToggleButton x:Name="Function_4_Btn"       Content="Function 4"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_4_Btn_Click" />
+                    <ToggleButton x:Name="Function_5_Btn"       Content="Function 5"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_5_Btn_Click" />
+                    <ToggleButton x:Name="Function_6_Btn"       Content="Function 6"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_6_Btn_Click" />
+                    <ToggleButton x:Name="Function_7_Btn"       Content="Function 7"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_7_Btn_Click" />
+                    <ToggleButton x:Name="Function_8_Btn"       Content="Function 8"        Height="80" Width="372" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Click="Function_8_Btn_Click" />
+                </StackPanel>
+            </ScrollViewer>
+        </Grid>
+        <Grid x:Name="Top_Left_Grid" VerticalAlignment="Top"    HorizontalAlignment="Left" Height="100"  Width="370" >
+            <Rectangle Fill="#1F5FAE" Stroke="Black" StrokeThickness="0.1"/>
+            <TextBlock x:Name="Select_TBlock" HorizontalAlignment="Left" Margin="160,0,0,0" Text="Select Test" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="30"/>
+            <Image x:Name="Top_Left_Img" HorizontalAlignment="Left" Height="80" Margin="65,0,0,0" VerticalAlignment="Center" Width="101" Source="/Images/Top_left.png"/>
+        </Grid>
+        <Grid x:Name="Scenario_Grid" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="645"  Width="910" >
+            <Frame x:Name="Scenario_Frame"/>
+        </Grid>
+    </Grid>
+</Page>
