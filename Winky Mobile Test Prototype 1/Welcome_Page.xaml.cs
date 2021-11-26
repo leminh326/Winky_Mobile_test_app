@@ -73,8 +73,9 @@ namespace Winky_Mobile_Test_Prototype_1
                 Progress_Bar.Value = Progress_Bar.Value + 20;
                 ProgressBar_Text.Text = Progress_Bar.Value.ToString() + "%";
             }
-            Progress_Bar.Visibility = Visibility.Collapsed;
-            ProgressBar_Text.Visibility = Visibility.Collapsed;
+            //Progress_Bar.Visibility = Visibility.Collapsed;
+            //ProgressBar_Text.Visibility = Visibility.Collapsed;
+            ProgressBar_Text.Text = "Select your device and click connect button";
             Select_CBox.IsEnabled = true;
             Scan_Btn.IsEnabled = false;
             rootPage.Is_Winky_Connected = true;
@@ -463,8 +464,9 @@ namespace Winky_Mobile_Test_Prototype_1
                 Progress_Bar.Value = Progress_Bar.Value + 20;
                 ProgressBar_Text.Text = Progress_Bar.Value.ToString() + "%";
             }
-            Progress_Bar.Visibility = Visibility.Collapsed;
-            ProgressBar_Text.Visibility = Visibility.Collapsed;
+            //Progress_Bar.Visibility = Visibility.Collapsed;
+            //ProgressBar_Text.Visibility = Visibility.Collapsed;
+            ProgressBar_Text.Text = "Click Start Button";
             Connect_Btn.IsEnabled = false;
             Begin_Test_Btn.IsEnabled = true;
         }

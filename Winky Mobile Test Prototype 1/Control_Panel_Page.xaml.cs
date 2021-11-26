@@ -59,6 +59,7 @@ namespace Winky_Mobile_Test_Prototype_1
             short Both_Motors_Value = (short)Both_Motors_Slider.Value;
 
             Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+            Power_Tbox.Text       = Both_Motors_Tbox.Text;
             Left_Motor_Tbox.Text  = Both_Motors_Slider.Value.ToString();
             Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
             Left_Motor_Slider.Value  = Both_Motors_Slider.Value;
@@ -135,6 +136,7 @@ namespace Winky_Mobile_Test_Prototype_1
                 Left_Motor_Slider.Value  = Both_Motors_Slider.Value;
                 Right_Motor_Slider.Value = Both_Motors_Slider.Value;
                 Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                Power_Tbox.Text = Both_Motors_Tbox.Text;
                 Left_Motor_Tbox.Text  = Both_Motors_Slider.Value.ToString();
                 Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
 
@@ -173,6 +175,7 @@ namespace Winky_Mobile_Test_Prototype_1
                 Left_Motor_Slider.Value  = Both_Motors_Slider.Value;
                 Right_Motor_Slider.Value = Both_Motors_Slider.Value;
                 Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                Power_Tbox.Text = Both_Motors_Tbox.Text;
                 Left_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
                 Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
 
@@ -196,12 +199,12 @@ namespace Winky_Mobile_Test_Prototype_1
                         if (direction == 0)
                         {
                             direction = 1;
-                            rootPage.Motor_Power_Command(2, -80);
+                            rootPage.Motor_Power_Command(2, (short)-( Convert.ToInt16(Power_Auto_Mode_Tbox.Text) )  );
                         }
                         else
                         {
                             direction = 0;
-                            rootPage.Motor_Power_Command(2, 80);
+                            rootPage.Motor_Power_Command(2, (short)(Convert.ToInt16(Power_Auto_Mode_Tbox.Text) ) );
                         }
                     }
                     else { auto_mode_on = false; rootPage.Motor_Power_Command(2, 0); }
@@ -229,6 +232,10 @@ namespace Winky_Mobile_Test_Prototype_1
             Both_Motors_Tbox.Text       = Both_Motors_Slider.Value.ToString();
             Left_Motor_Tbox.Text        = Both_Motors_Slider.Value.ToString();
             Right_Motor_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+            Power_Slider.Value          = 0;
+            Balance_Slider.Value        = 0;
+            Power_Tbox.Text = Both_Motors_Tbox.Text;
+            Balance_Tbox.Text = "0";
         }
 
         private void Full_Power_Btn_Click(object sender, RoutedEventArgs e)
@@ -241,6 +248,9 @@ namespace Winky_Mobile_Test_Prototype_1
             Both_Motors_Tbox.Text       = Both_Motors_Slider.Value.ToString();
             Left_Motor_Tbox.Text        = Both_Motors_Slider.Value.ToString();
             Right_Motor_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+            Power_Slider.Value          = 100;
+            Balance_Slider.Value        = 0;
+            Power_Tbox.Text = Both_Motors_Tbox.Text;
         }
 
         private void Power_Slider_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
@@ -254,6 +264,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Both_Motors_Tbox.Text    = Both_Motors_Slider.Value.ToString();
             Left_Motor_Tbox.Text     = Left_Motor_Slider.Value.ToString();
             Right_Motor_Tbox.Text    = Right_Motor_Slider.Value.ToString();
+            Power_Tbox.Text = Both_Motors_Tbox.Text;
 
             if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
             {
@@ -276,6 +287,8 @@ namespace Winky_Mobile_Test_Prototype_1
             Both_Motors_Tbox.Text    = Both_Motors_Slider.Value.ToString();
             Left_Motor_Tbox.Text     = Left_Motor_Slider.Value.ToString();
             Right_Motor_Tbox.Text    = Right_Motor_Slider.Value.ToString();
+            Power_Tbox.Text = Both_Motors_Tbox.Text;
+            Balance_Tbox.Text = (Right_Motor_Slider.Value - Left_Motor_Slider.Value).ToString();
 
             if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
             {
@@ -284,6 +297,136 @@ namespace Winky_Mobile_Test_Prototype_1
             if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
             {
                 rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+            }
+        }
+
+        private void Grid_KeyDown(object sender, KeyRoutedEventArgs e)
+        {
+            switch (e.Key)
+            {
+                case Windows.System.VirtualKey.Up:
+                    Power_Slider.Value = Power_Slider.Value + 10;
+                    double Right_Power_Value = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+                    double Left_Power_Value = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+                    Both_Motors_Slider.Value = Power_Slider.Value;
+                    Left_Motor_Slider.Value = Left_Power_Value;
+                    Right_Motor_Slider.Value = Right_Power_Value;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Left_Motor_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Right_Motor_Slider.Value.ToString();
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+
+                    if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+                    }
+                    if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+                    }
+                    break;
+                case Windows.System.VirtualKey.Down:
+                    Power_Slider.Value = Power_Slider.Value - 10;
+                    double Right_Power_Value4 = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+                    double Left_Power_Value4 = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+                    Both_Motors_Slider.Value = Power_Slider.Value;
+                    Left_Motor_Slider.Value = Left_Power_Value4;
+                    Right_Motor_Slider.Value = Right_Power_Value4;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Left_Motor_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Right_Motor_Slider.Value.ToString();
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+
+                    if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+                    }
+                    if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+                    }
+                    break;
+                case Windows.System.VirtualKey.Left:
+                    Balance_Slider.Value = Balance_Slider.Value + 10;
+                    double Right_Power_Value3 = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+                    double Left_Power_Value3 = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+                    Both_Motors_Slider.Value = Power_Slider.Value;
+                    Left_Motor_Slider.Value = Left_Power_Value3;
+                    Right_Motor_Slider.Value = Right_Power_Value3;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Left_Motor_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Right_Motor_Slider.Value.ToString();
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+
+                    if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+                    }
+                    if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+                    }
+                    break;
+                case Windows.System.VirtualKey.Right:
+                    Balance_Slider.Value = Balance_Slider.Value - 10;
+                    double Right_Power_Value2 = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+                    double Left_Power_Value2 = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+                    Both_Motors_Slider.Value = Power_Slider.Value;
+                    Left_Motor_Slider.Value = Left_Power_Value2;
+                    Right_Motor_Slider.Value = Right_Power_Value2;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Left_Motor_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Right_Motor_Slider.Value.ToString();
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+
+                    if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+                    }
+                    if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+                    }
+                    break;
+                case Windows.System.VirtualKey.B:
+                    rootPage.Motor_Power_Command(2, 0);
+
+                    Both_Motors_Slider.Value = 0;
+                    Left_Motor_Slider.Value = 0;
+                    Right_Motor_Slider.Value = 0;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Power_Slider.Value = 0;
+                    Balance_Slider.Value = 0;
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+                    break;
+                case Windows.System.VirtualKey.C:
+                    Balance_Slider.Value = 0;
+                    double Right_Power_Value7 = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+                    double Left_Power_Value7 = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+                    Both_Motors_Slider.Value = Power_Slider.Value;
+                    Left_Motor_Slider.Value = Left_Power_Value7;
+                    Right_Motor_Slider.Value = Right_Power_Value7;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Left_Motor_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Right_Motor_Slider.Value.ToString();
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+
+                    if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+                    }
+                    if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+                    {
+                        rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+                    }
+                    break;
             }
         }
     }

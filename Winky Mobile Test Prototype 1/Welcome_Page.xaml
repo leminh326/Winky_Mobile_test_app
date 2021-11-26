@@ -18,35 +18,36 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Center" Margin="0,27,0,0" Text="Winky Mobile " TextWrapping="Wrap" VerticalAlignment="Top" FontSize="60"/>
-        <TextBlock x:Name="Select_Winky_TBlock" HorizontalAlignment="Left" Margin="182,152,0,0" Text="Device ID" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="40"/>
-        <ComboBox x:Name="Select_CBox" Margin="171,226,0,0" Width="189" FontSize="15"                       
+        <TextBlock x:Name="Select_Winky_TBlock" HorizontalAlignment="Left" Margin="184,152,0,0" Text="Device ID" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+        <ComboBox x:Name="Select_CBox" Margin="152,197,0,0" Width="189" FontSize="15"                       
                   ItemTemplate="{StaticResource ResultsListViewTemplate}"
                   ItemsSource="{x:Bind KnownDevices, Mode=OneWay}" SelectionChanged="Select_CBox_SelectionChanged" IsEnabled="False" RenderTransformOrigin="0.5,0.5">
             <ComboBox.RenderTransform>
-                <CompositeTransform ScaleX="2" ScaleY="2"/>
+                <CompositeTransform ScaleX="1" ScaleY="1"/>
             </ComboBox.RenderTransform>
         </ComboBox>
-        <ToggleButton x:Name="Scan_Btn" Content="Scan" Margin="653,217,0,0" VerticalAlignment="Top" FontSize="30" Width="161" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Click="Scan_Btn_Click" RenderTransformOrigin="0.5,0.5" >
+        <ToggleButton x:Name="Scan_Btn" Content="Scan" Margin="152,259,0,0" FontSize="30" Width="189" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Click="Scan_Btn_Click" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" >
             <ToggleButton.RenderTransform>
-                <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                <CompositeTransform ScaleX="1" ScaleY="1"/>
             </ToggleButton.RenderTransform>
         </ToggleButton>
-        <Button x:Name="Begin_Test_Btn" Content="Start" Margin="653,368,0,0" FontSize="30" Width="161" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" IsEnabled="False" Click="Begin_Test_Btn_Click" VerticalAlignment="Top" Height="48" RenderTransformOrigin="0.5,0.5">
+        <Button x:Name="Begin_Test_Btn" Content="Start" Margin="152,424,0,0" FontSize="30" Width="189" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" IsEnabled="False" Click="Begin_Test_Btn_Click" VerticalAlignment="Top" Height="48" RenderTransformOrigin="0.5,0.5">
             <Button.RenderTransform>
-                <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                <CompositeTransform ScaleX="1" ScaleY="1"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="Connect_Btn" Content="Connect" Margin="185,368,0,0" VerticalAlignment="Top" FontSize="30" Width="161" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" IsEnabled="False" Click="Connect_Btn_Click" Height="48" RenderTransformOrigin="0.5,0.5" >
+        <Button x:Name="Connect_Btn" Content="Connect" Margin="152,343,0,0" VerticalAlignment="Top" FontSize="30" Width="189" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" IsEnabled="False" Click="Connect_Btn_Click" Height="48" RenderTransformOrigin="0.5,0.5" >
             <Button.RenderTransform>
-                <CompositeTransform ScaleX="1.5" ScaleY="1.5"/>
+                <CompositeTransform ScaleX="1" ScaleY="1"/>
             </Button.RenderTransform>
         </Button>
-        <ProgressBar x:Name="Progress_Bar" HorizontalAlignment="Left" Height="39" Margin="271,544,0,0" VerticalAlignment="Top" Width="389" Visibility="Visible" Value="100" RenderTransformOrigin="0.5,0.5" >
+        <ProgressBar x:Name="Progress_Bar" HorizontalAlignment="Left" Height="39" Margin="152,545,0,0" VerticalAlignment="Top" Width="645" Visibility="Visible" Value="100" RenderTransformOrigin="0.5,0.5" >
             <ProgressBar.RenderTransform>
-                <CompositeTransform ScaleX="2" ScaleY="2"/>
+                <CompositeTransform ScaleX="1" ScaleY="1"/>
             </ProgressBar.RenderTransform>
         </ProgressBar>
-        <TextBlock x:Name="ProgressBar_Text" TextAlignment="Center" HorizontalAlignment="Left" Margin="123,537,0,0" Text="---" VerticalAlignment="Top" FontSize="40" Foreground="White" Width="667"/>
+        <TextBlock x:Name="ProgressBar_Text" TextAlignment="Center" HorizontalAlignment="Left" Margin="152,544,0,0" Text="Click scan button to begin" VerticalAlignment="Top" FontSize="30" Foreground="White" Width="646"/>
+        <Image HorizontalAlignment="Left" Height="307" Margin="497,166,0,0" VerticalAlignment="Top" Width="308" Source="/Images/Winky_Mobile.PNG"/>
 
     </Grid>
 </Page>

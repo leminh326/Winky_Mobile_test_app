@@ -44,8 +44,8 @@
         </Grid>
         <Grid x:Name="Top_Left_Grid" VerticalAlignment="Top"    HorizontalAlignment="Left" Height="100"  Width="370" >
             <Rectangle Fill="#1F5FAE" Stroke="Black" StrokeThickness="0.1"/>
-            <TextBlock x:Name="Select_TBlock" HorizontalAlignment="Left" Margin="160,0,0,0" Text="Select Test" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="30"/>
-            <Image x:Name="Top_Left_Img" HorizontalAlignment="Left" Height="80" Margin="65,0,0,0" VerticalAlignment="Center" Width="101" Source="/Images/Top_left.png"/>
+            <TextBlock x:Name="Select_TBlock" HorizontalAlignment="Left" Margin="150,0,0,0" Text="Select Panel" TextWrapping="Wrap" VerticalAlignment="Center" Foreground="White" FontSize="30"/>
+            <Image x:Name="Top_Left_Img" HorizontalAlignment="Left" Height="80" Margin="55,0,0,0" VerticalAlignment="Center" Width="101" Source="/Images/Top_left.png"/>
         </Grid>
         <Grid x:Name="Scenario_Grid" VerticalAlignment="Bottom" HorizontalAlignment="Right" Height="645"  Width="910" >
             <Frame x:Name="Scenario_Frame"/>

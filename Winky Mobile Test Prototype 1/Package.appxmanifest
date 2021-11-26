@@ -7,15 +7,15 @@
   IgnorableNamespaces="uap mp">
 
   <Identity
-    Name="30d8a871-f378-4fbc-993a-708b9732c805"
-    Publisher="CN=lemin"
-    Version="1.0.0.0" />
+    Name="Mainbot.WinkyMobileTestApp1"
+    Publisher="CN=352CC9B8-A17D-4BC2-BCD1-D50150A57724"
+    Version="1.0.6.0" />
 
-  <mp:PhoneIdentity PhoneProductId="30d8a871-f378-4fbc-993a-708b9732c805" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
+  <mp:PhoneIdentity PhoneProductId="212bf4e8-facd-4b5f-bed3-12bf070ae6e5" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
 
   <Properties>
-    <DisplayName>Winky Mobile Test Prototype 1</DisplayName>
-    <PublisherDisplayName>lemin</PublisherDisplayName>
+    <DisplayName>Winky Mobile Test App1</DisplayName>
+    <PublisherDisplayName>Mainbot</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
 
@@ -32,13 +32,15 @@
       Executable="$targetnametoken$.exe"
       EntryPoint="Winky_Mobile_Test_Prototype_1.App">
       <uap:VisualElements
-        DisplayName="Winky Mobile Test Prototype 1"
+        DisplayName="Winky Mobile Test App1"
         Square150x150Logo="Assets\Square150x150Logo.png"
         Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Winky Mobile Test Prototype 1"
         BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png"/>
+        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
         <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        <uap:InitialRotationPreference>
+          <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
       </uap:VisualElements>
     </Application>
   </Applications>
