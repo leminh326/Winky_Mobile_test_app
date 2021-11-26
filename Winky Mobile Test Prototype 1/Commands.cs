@@ -30,11 +30,11 @@ namespace Winky_Mobile_Test_Prototype_1
             {
                 case 0:
                     writer.WriteBytes(value_to_write);
-                    await Write_Buffer_To_Serv2_Char1_Characteristic(writer.DetachBuffer());
+                    await Write_Buffer_To_Serv2_Char2_Characteristic(writer.DetachBuffer());
                     break;
                 case 1:
                     writer.WriteBytes(value_to_write);
-                    await Write_Buffer_To_Serv2_Char2_Characteristic(writer.DetachBuffer());
+                    await Write_Buffer_To_Serv2_Char1_Characteristic(writer.DetachBuffer());
                     break;
                 case 2:
                     writer.WriteBytes(value_to_write);

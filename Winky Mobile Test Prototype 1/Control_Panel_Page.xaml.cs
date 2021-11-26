@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
+using System.Threading.Tasks;
 using Windows.Foundation;
 using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
@@ -23,6 +24,8 @@ namespace Winky_Mobile_Test_Prototype_1
     public sealed partial class Control_Panel_Page : Page
     {
         private MainPage rootPage = MainPage.Current;
+        bool auto_mode_on = false;
+
         public Control_Panel_Page()
         {
             this.InitializeComponent();
@@ -175,6 +178,112 @@ namespace Winky_Mobile_Test_Prototype_1
 
                 short Both_Motors_Value = (short)Both_Motors_Slider.Value;
                 rootPage.Motor_Power_Command(2, Both_Motors_Value);
+            }
+        }
+
+        private async Task AutoModeTask()
+        {
+            if (Auto_Mode_Btn.IsChecked == true)
+            {
+                auto_mode_on = true;
+                int direction = 0;
+
+                while (auto_mode_on == true)
+                {
+                    await Task.Delay( Convert.ToInt16(Auto_Mode_Tbox.Text) );
+                    if (Auto_Mode_Btn.IsChecked == true) 
+                    {
+                        if (direction == 0)
+                        {
+                            direction = 1;
+                            rootPage.Motor_Power_Command(2, -80);
+                        }
+                        else
+                        {
+                            direction = 0;
+                            rootPage.Motor_Power_Command(2, 80);
+                        }
+                    }
+                    else { auto_mode_on = false; rootPage.Motor_Power_Command(2, 0); }
+                }
+            }
+            else 
+            {
+                auto_mode_on = false;
+                rootPage.Motor_Power_Command(2,0);               
+            }
+        }
+
+        private void Auto_Mode_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            AutoModeTask();
+        }
+
+        private void Stop_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            rootPage.Motor_Power_Command(2, 0);
+
+            Both_Motors_Slider.Value    = 0;
+            Left_Motor_Slider.Value     = 0;
+            Right_Motor_Slider.Value    = 0;
+            Both_Motors_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+            Left_Motor_Tbox.Text        = Both_Motors_Slider.Value.ToString();
+            Right_Motor_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+        }
+
+        private void Full_Power_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            rootPage.Motor_Power_Command(2, 100);
+
+            Both_Motors_Slider.Value    = 100;
+            Left_Motor_Slider.Value     = 100;
+            Right_Motor_Slider.Value    = 100;
+            Both_Motors_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+            Left_Motor_Tbox.Text        = Both_Motors_Slider.Value.ToString();
+            Right_Motor_Tbox.Text       = Both_Motors_Slider.Value.ToString();
+        }
+
+        private void Power_Slider_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
+        {
+            double Right_Power_Value = Power_Slider.Value * ( 1 - (-Balance_Slider.Value / 100) );
+            double Left_Power_Value  = Power_Slider.Value * ( 1 - ( Balance_Slider.Value / 100) );
+
+            Both_Motors_Slider.Value = Power_Slider.Value;
+            Left_Motor_Slider.Value  = Left_Power_Value;
+            Right_Motor_Slider.Value = Right_Power_Value;
+            Both_Motors_Tbox.Text    = Both_Motors_Slider.Value.ToString();
+            Left_Motor_Tbox.Text     = Left_Motor_Slider.Value.ToString();
+            Right_Motor_Tbox.Text    = Right_Motor_Slider.Value.ToString();
+
+            if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+            {
+                rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+            }
+            if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+            {
+                rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
+            }
+        }
+
+        private void Balance_Slider_PointerCaptureLost(object sender, PointerRoutedEventArgs e)
+        {
+            double Right_Power_Value = Power_Slider.Value * (1 - (-Balance_Slider.Value / 100));
+            double Left_Power_Value  = Power_Slider.Value * (1 - (Balance_Slider.Value / 100));
+
+            Both_Motors_Slider.Value = Power_Slider.Value;
+            Left_Motor_Slider.Value  = Left_Power_Value;
+            Right_Motor_Slider.Value = Right_Power_Value;
+            Both_Motors_Tbox.Text    = Both_Motors_Slider.Value.ToString();
+            Left_Motor_Tbox.Text     = Left_Motor_Slider.Value.ToString();
+            Right_Motor_Tbox.Text    = Right_Motor_Slider.Value.ToString();
+
+            if ((Left_Motor_Slider.Value <= 100) && (Left_Motor_Slider.Value >= -100))
+            {
+                rootPage.Motor_Power_Command(0, (short)Left_Motor_Slider.Value);
+            }
+            if ((Right_Motor_Slider.Value <= 100) && (Right_Motor_Slider.Value >= -100))
+            {
+                rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
             }
         }
     }

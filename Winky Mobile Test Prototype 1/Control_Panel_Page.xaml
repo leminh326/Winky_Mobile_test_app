@@ -10,69 +10,97 @@
 
     <Grid>
         <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Text="Control Panel" TextWrapping="Wrap"  FontSize="60"/>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,180,678,0" Text="Left Motor" TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="201"/>
-        <TextBox x:Name="Left_Motor_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="599,195,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Left_Motor_Tbox_LostFocus">
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,142,673,0" Text="Left Motor" TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="201"/>
+        <TextBox x:Name="Left_Motor_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="604,157,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Left_Motor_Tbox_LostFocus">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="Plus_Left_Motor_Btn" Content="+" Margin="749,195,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Click="Plus_Left_Motor_Btn_Click">
+        <Button x:Name="Plus_Left_Motor_Btn" Content="+" Margin="754,157,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Click="Plus_Left_Motor_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="Minus_Left_Motor_Btn" Content="-" Margin="829,195,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" Click="Minus_Left_Motor_Btn_Click">
+        <Button x:Name="Minus_Left_Motor_Btn" Content="-" Margin="834,157,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" Click="Minus_Left_Motor_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <Slider x:Name="Left_Motor_Slider" HorizontalAlignment="Left" Margin="357,197,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Left_Motor_Slider_PointerCaptureLost" Minimum="-100" >
+        <Slider x:Name="Left_Motor_Slider" HorizontalAlignment="Left" Margin="362,159,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Left_Motor_Slider_PointerCaptureLost" Minimum="-100" >
             <Slider.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Slider.RenderTransform>
         </Slider>
-        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="31,323,0,0" Text="Right Motor" TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="223"/>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,465,648,0" Text="Both Motors " TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="231"/>
-        <TextBox x:Name="Right_Motor_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="599,333,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Right_Motor_Tbox_LostFocus">
+        <TextBlock HorizontalAlignment="Left" VerticalAlignment="Top" Margin="36,229,0,0" Text="Right Motor" TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="223"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,310,643,0" Text="Both Motors " TextWrapping="Wrap"  FontSize="40" TextAlignment="Right" Width="231"/>
+        <TextBox x:Name="Right_Motor_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="604,241,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Right_Motor_Tbox_LostFocus">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="Plus_Right_Motor_Btn" Content="+" Margin="749,333,0,0" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Click="Plus_Right_Motor_Btn_Click">
+        <Button x:Name="Plus_Right_Motor_Btn" Content="+" Margin="754,241,0,0" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Click="Plus_Right_Motor_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="Minus_Right_Motor_Btn" Content="-" Margin="829,333,0,0" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Click="Minus_Right_Motor_Btn_Click">
+        <Button x:Name="Minus_Right_Motor_Btn" Content="-" Margin="834,241,0,0" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top" Click="Minus_Right_Motor_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <TextBox x:Name="Both_Motors_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="599,480,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Both_Motors_Tbox_LostFocus">
+        <TextBox x:Name="Both_Motors_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="604,325,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Both_Motors_Tbox_LostFocus">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <Button x:Name="Plus_Both_Motors_Btn" Content="+" Margin="749,480,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Click="Plus_Both_Motors_Btn_Click">
+        <Button x:Name="Plus_Both_Motors_Btn" Content="+" Margin="754,325,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" FontWeight="Normal" RenderTransformOrigin="0.5,0.5" Click="Plus_Both_Motors_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <Button x:Name="Minus_Both_Motors_Btn" Content="-" Margin="829,480,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" Click="Minus_Both_Motors_Btn_Click">
+        <Button x:Name="Minus_Both_Motors_Btn" Content="-" Margin="834,325,0,0" VerticalAlignment="Top" FontSize="20" Width="33" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" Height="33" RenderTransformOrigin="0.5,0.5" Click="Minus_Both_Motors_Btn_Click">
             <Button.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Button.RenderTransform>
         </Button>
-        <Slider x:Name="Right_Motor_Slider" HorizontalAlignment="Left" Margin="357,339,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Right_Motor_Slider_PointerCaptureLost" Minimum="-100" >
+        <Slider x:Name="Right_Motor_Slider" HorizontalAlignment="Left" Margin="362,247,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Right_Motor_Slider_PointerCaptureLost" Minimum="-100" >
             <Slider.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Slider.RenderTransform>
         </Slider>
-        <Slider x:Name="Both_Motors_Slider" HorizontalAlignment="Left" Margin="357,482,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Both_Motors_Slider_PointerCaptureLost" Minimum="-100" >
+        <Slider x:Name="Both_Motors_Slider" HorizontalAlignment="Left" Margin="362,327,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Both_Motors_Slider_PointerCaptureLost" Minimum="-100" >
             <Slider.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Slider.RenderTransform>
         </Slider>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,113,155,0" Text="Power percentage" TextWrapping="Wrap"  FontSize="30" TextAlignment="Right" Width="255"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,90,150,0" Text="Power percentage" TextWrapping="Wrap"  FontSize="30" TextAlignment="Right" Width="255"/>
+        <ToggleButton x:Name="Auto_Mode_Btn" Content="Auto Mode"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="50,539,0,0" VerticalAlignment="Top" Click="Auto_Mode_Btn_Click"/>
+        <TextBox x:Name="Auto_Mode_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="364,563,0,0" Text="1000" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <CompositeTransform ScaleX="2" ScaleY="2"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <Button x:Name="Stop_Btn" Content="Stop"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="639,533,0,0" VerticalAlignment="Top" Click="Stop_Btn_Click"/>
+        <Slider x:Name="Power_Slider" HorizontalAlignment="Left" Margin="112,484,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Power_Slider_PointerCaptureLost" >
+            <Slider.RenderTransform>
+                <CompositeTransform ScaleX="2" ScaleY="2"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <ToggleButton x:Name="Full_Power_Btn" Content="Full Power"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="639,428,0,0" VerticalAlignment="Top" Click="Full_Power_Btn_Click"/>
+        <Slider x:Name="Balance_Slider" HorizontalAlignment="Left" Margin="388,484,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" Minimum="-100" PointerCaptureLost="Balance_Slider_PointerCaptureLost" >
+            <Slider.RenderTransform>
+                <CompositeTransform ScaleX="2" ScaleY="2"/>
+            </Slider.RenderTransform>
+        </Slider>
+        <TextBox x:Name="Power_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="136,414,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <CompositeTransform ScaleX="2" ScaleY="2"/>
+            </TextBox.RenderTransform>
+        </TextBox>
+        <TextBox x:Name="Balance_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="408,414,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
+            <TextBox.RenderTransform>
+                <CompositeTransform ScaleX="2" ScaleY="2"/>
+            </TextBox.RenderTransform>
+        </TextBox>
     </Grid>
 </Page>
