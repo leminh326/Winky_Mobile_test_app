@@ -16,7 +16,7 @@
   <Properties>
     <DisplayName>Winky Mobile Test App1</DisplayName>
     <PublisherDisplayName>Mainbot</PublisherDisplayName>
-    <Logo>Assets\StoreLogo.png</Logo>
+    <Logo>Images\photoshop\200_200.png</Logo>
   </Properties>
 
   <Dependencies>
@@ -33,14 +33,18 @@
       EntryPoint="Winky_Mobile_Test_Prototype_1.App">
       <uap:VisualElements
         DisplayName="Winky Mobile Test App1"
-        Square150x150Logo="Assets\Square150x150Logo.png"
-        Square44x44Logo="Assets\Square44x44Logo.png"
         Description="Winky Mobile Test Prototype 1"
-        BackgroundColor="transparent">
-        <uap:DefaultTile Wide310x150Logo="Assets\Wide310x150Logo.png" Square71x71Logo="Assets\SmallTile.png" Square310x310Logo="Assets\LargeTile.png"/>
-        <uap:SplashScreen Image="Assets\SplashScreen.png" />
+        BackgroundColor="transparent" Square150x150Logo="Images\photoshop\600_600.png" Square44x44Logo="Images\photoshop\176_176.png">
         <uap:InitialRotationPreference>
           <uap:Rotation Preference="landscape"/></uap:InitialRotationPreference>
+        <uap:DefaultTile Square71x71Logo="Images\photoshop\284_284.png" Wide310x150Logo="Images\photoshop\1240_600.png" Square310x310Logo="Images\photoshop\1024_1024.png">
+          <uap:ShowNameOnTiles>
+            <uap:ShowOn Tile="square150x150Logo"/>
+            <uap:ShowOn Tile="wide310x150Logo"/>
+            <uap:ShowOn Tile="square310x310Logo"/>
+          </uap:ShowNameOnTiles>
+        </uap:DefaultTile>
+        <uap:SplashScreen Image="Images\photoshop\2480_1200.png"/>
       </uap:VisualElements>
     </Application>
   </Applications>

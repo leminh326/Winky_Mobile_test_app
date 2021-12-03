@@ -427,6 +427,32 @@ namespace Winky_Mobile_Test_Prototype_1
                         rootPage.Motor_Power_Command(1, (short)Right_Motor_Slider.Value);
                     }
                     break;
+                case Windows.System.VirtualKey.V:
+                    rootPage.Motor_Power_Command(2, 100);
+
+                    Both_Motors_Slider.Value = 100;
+                    Left_Motor_Slider.Value = 100;
+                    Right_Motor_Slider.Value = 100;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Power_Slider.Value = 100;
+                    Balance_Slider.Value = 100;
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+                    break;
+                case Windows.System.VirtualKey.N:
+                    rootPage.Motor_Power_Command(2, -100);
+
+                    Both_Motors_Slider.Value = -100;
+                    Left_Motor_Slider.Value = -100;
+                    Right_Motor_Slider.Value = -100;
+                    Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Left_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+                    Power_Slider.Value = -100;
+                    Balance_Slider.Value = -100;
+                    Power_Tbox.Text = Both_Motors_Tbox.Text;
+                    break;
             }
         }
     }
