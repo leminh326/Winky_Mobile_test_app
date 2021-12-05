@@ -13,11 +13,13 @@ namespace Winky_Mobile_Test_Prototype_1
     public partial class MainPage : Page
     {
         public byte[] value_to_write;
-
+        private MainPage rootPage = MainPage.Current;
         public async void Motor_Power_Command(short Motor_Selected, short Value)
         {
             var writer = new DataWriter();
             byte direction = 0;
+            short offset   = 0;
+            if (Math.Abs(Value) > 0) { offset = motor_power_offset; }
 
             if      (Value > 0) { direction = 1;}
             else if (Value < 0) { direction = 2;}
@@ -37,8 +39,13 @@ namespace Winky_Mobile_Test_Prototype_1
                     await Write_Buffer_To_Serv2_Char1_Characteristic(writer.DetachBuffer());
                     break;
                 case 2:
+                    byte[] frame_commade1 = { (byte)(Value - offset), direction };
+                    value_to_write = frame_commade1;
                     writer.WriteBytes(value_to_write);
                     await Write_Buffer_To_Serv2_Char1_Characteristic(writer.DetachBuffer());
+
+                    byte[] frame_commade2 = { (byte)(Value), direction };
+                    value_to_write = frame_commade2;
                     writer.WriteBytes(value_to_write);
                     await Write_Buffer_To_Serv2_Char2_Characteristic(writer.DetachBuffer());
                     break;

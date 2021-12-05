@@ -123,8 +123,14 @@
     <RestoreProjectStyle>PackageReference</RestoreProjectStyle>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Admin_Page.xaml.cs">
+      <DependentUpon>Admin_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Auto_Mode_Page.xaml.cs">
+      <DependentUpon>Auto_Mode_Page.xaml</DependentUpon>
     </Compile>
     <Compile Include="Commands.cs" />
     <Compile Include="Control_Panel_Page.xaml.cs">
@@ -193,6 +199,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
     <Content Include="Images\App_Icon.jpg" />
     <Content Include="Images\App_Icon.png" />
+    <Content Include="Images\auto_mode.png" />
+    <Content Include="Images\BLE.jpg" />
     <Content Include="Images\icon_sound.png" />
     <Content Include="Images\photoshop\100_100.png" />
     <Content Include="Images\photoshop\1024_1024.scale-100.png" />
@@ -244,6 +252,14 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Admin_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Auto_Mode_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Control_Panel_Page.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -74,43 +74,38 @@
             </Slider.RenderTransform>
         </Slider>
         <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,95,190,0" Text="Power percentage" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="177"/>
-        <ToggleButton x:Name="Auto_Mode_Btn" Content="Auto Mode"       Height="74" Width="173" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="15,543,0,0" VerticalAlignment="Top" Click="Auto_Mode_Btn_Click"/>
-        <TextBox x:Name="Auto_Mode_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="376,563,0,0" Text="1000" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="66" Height="33" RenderTransformOrigin="0.5,0.5">
-            <TextBox.RenderTransform>
-                <CompositeTransform ScaleX="2" ScaleY="2"/>
-            </TextBox.RenderTransform>
-        </TextBox>
-        <Button x:Name="Stop_Btn" Content="Stop"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="639,533,0,0" VerticalAlignment="Top" Click="Stop_Btn_Click"/>
-        <Slider x:Name="Power_Slider" HorizontalAlignment="Left" Margin="112,478,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Power_Slider_PointerCaptureLost" Minimum="-100" >
+        <Button x:Name="Stop_Btn" Content="Stop"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="526,541,0,0" VerticalAlignment="Top" Click="Stop_Btn_Click"/>
+        <Slider x:Name="Power_Slider" HorizontalAlignment="Left" Margin="88,478,0,0" VerticalAlignment="Top" Width="74" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" PointerCaptureLost="Power_Slider_PointerCaptureLost" Minimum="-100" >
             <Slider.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Slider.RenderTransform>
         </Slider>
-        <ToggleButton x:Name="Full_Power_Btn" Content="Full Power"       Height="80" Width="245" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="639,411,0,0" VerticalAlignment="Top" Click="Full_Power_Btn_Click"/>
-        <Slider x:Name="Balance_Slider" HorizontalAlignment="Left" Margin="388,478,0,0" VerticalAlignment="Top" Width="122" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" Minimum="-100" PointerCaptureLost="Balance_Slider_PointerCaptureLost" >
+        <ToggleButton x:Name="Full_Power_Btn" Content="+"       Height="86" Width="105" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="40" IsEnabled="true" Margin="628,408,0,0" VerticalAlignment="Top" Click="Full_Power_Btn_Click"/>
+        <Slider x:Name="Balance_Slider" HorizontalAlignment="Left" Margin="281,478,0,0" VerticalAlignment="Top" Width="74" Maximum="100" LargeChange="30" SmallChange="20" RenderTransformOrigin="0.5,0.5" Minimum="-100" PointerCaptureLost="Balance_Slider_PointerCaptureLost" >
             <Slider.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </Slider.RenderTransform>
         </Slider>
-        <TextBox x:Name="Power_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="132,418,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Power_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="88,419,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBox x:Name="Balance_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="408,418,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
+        <TextBox x:Name="Balance_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="281,419,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <ToggleButton x:Name="Null_Btn" Content="Manual"       Height="80" Width="119" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="505,533,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,376,711,0" Text="Power" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,375,430,0" Text="Balance" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
-        <TextBox x:Name="Power_Auto_Mode_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="235,562,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="66" Height="33" RenderTransformOrigin="0.5,0.5">
+        <ToggleButton x:Name="Null_Btn" Content="Manual Mode"       Height="80" Width="233" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="202,541,0,0" VerticalAlignment="Top"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,376,752,0" Text="Power" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,376,557,0" Text="Balance" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,376,123,0" Text="Full Power" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="107"/>
+        <ToggleButton x:Name="Full_Power_Negative_Btn" Content="-"       Height="86" Width="98" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="40" IsEnabled="true" Margin="753,408,0,0" VerticalAlignment="Top" Click="Full_Power_Negative_Btn_Click"/>
+        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,376,384,0" Text="Offset" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
+        <TextBox x:Name="Offset_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="460,418,0,0" Text="0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="74" Height="33" RenderTransformOrigin="0.5,0.5" LostFocus="Offset_Tbox_LostFocus">
             <TextBox.RenderTransform>
                 <CompositeTransform ScaleX="2" ScaleY="2"/>
             </TextBox.RenderTransform>
         </TextBox>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,519,607,0" Text="Power" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="69"/>
-        <TextBlock HorizontalAlignment="Right" VerticalAlignment="Top" Margin="0,521,453,0" Text="Time (ms)" TextWrapping="Wrap"  FontSize="20" TextAlignment="Right" Width="98"/>
     </Grid>
 </Page>

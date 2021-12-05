@@ -55,6 +55,7 @@ namespace Winky_Mobile_Test_Prototype_1
         public GattCharacteristic Serv3_Char1;
         public GattCharacteristic Serv3_Char2;
 
+        public short motor_power_offset = 0;
         public readonly int E_BLUETOOTH_ATT_WRITE_NOT_PERMITTED = unchecked((int)0x80650003);
         public readonly int E_BLUETOOTH_ATT_INVALID_PDU = unchecked((int)0x80650004);
         public readonly int E_ACCESSDENIED = unchecked((int)0x80070005);

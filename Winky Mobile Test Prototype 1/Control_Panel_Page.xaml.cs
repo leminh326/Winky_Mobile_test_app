@@ -184,44 +184,6 @@ namespace Winky_Mobile_Test_Prototype_1
             }
         }
 
-        private async Task AutoModeTask()
-        {
-            if (Auto_Mode_Btn.IsChecked == true)
-            {
-                auto_mode_on = true;
-                int direction = 0;
-
-                while (auto_mode_on == true)
-                {
-                    await Task.Delay( Convert.ToInt16(Auto_Mode_Tbox.Text) );
-                    if (Auto_Mode_Btn.IsChecked == true) 
-                    {
-                        if (direction == 0)
-                        {
-                            direction = 1;
-                            rootPage.Motor_Power_Command(2, (short)-( Convert.ToInt16(Power_Auto_Mode_Tbox.Text) )  );
-                        }
-                        else
-                        {
-                            direction = 0;
-                            rootPage.Motor_Power_Command(2, (short)(Convert.ToInt16(Power_Auto_Mode_Tbox.Text) ) );
-                        }
-                    }
-                    else { auto_mode_on = false; rootPage.Motor_Power_Command(2, 0); }
-                }
-            }
-            else 
-            {
-                auto_mode_on = false;
-                rootPage.Motor_Power_Command(2,0);               
-            }
-        }
-
-        private void Auto_Mode_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            AutoModeTask();
-        }
-
         private void Stop_Btn_Click(object sender, RoutedEventArgs e)
         {
             rootPage.Motor_Power_Command(2, 0);
@@ -454,6 +416,26 @@ namespace Winky_Mobile_Test_Prototype_1
                     Power_Tbox.Text = Both_Motors_Tbox.Text;
                     break;
             }
+        }
+
+        private void Full_Power_Negative_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            rootPage.Motor_Power_Command(2, -100);
+
+            Both_Motors_Slider.Value = -100;
+            Left_Motor_Slider.Value = -100;
+            Right_Motor_Slider.Value = -100;
+            Both_Motors_Tbox.Text = Both_Motors_Slider.Value.ToString();
+            Left_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+            Right_Motor_Tbox.Text = Both_Motors_Slider.Value.ToString();
+            Power_Slider.Value = -100;
+            Balance_Slider.Value = 0;
+            Power_Tbox.Text = Both_Motors_Tbox.Text;
+        }
+
+        private void Offset_Tbox_LostFocus(object sender, RoutedEventArgs e)
+        {
+            rootPage.motor_power_offset = Convert.ToInt16(Offset_Tbox.Text);
         }
     }
 }

@@ -49,7 +49,7 @@ namespace Winky_Mobile_Test_Prototype_1
         {
             if (Control_Panel_Btn.IsChecked == true)
             {
-                //Scenario_Frame.Navigate(typeof(Page1_Info));
+                Scenario_Frame.Navigate(typeof(Control_Panel_Page));
                 Unchecked_All();
                 Control_Panel_Btn.IsChecked = true;
             }
@@ -60,20 +60,9 @@ namespace Winky_Mobile_Test_Prototype_1
         {
             if (Admin_Service_Btn.IsChecked == true)
             {
-                //Scenario_Frame.Navigate(typeof(Page1_Info));
+                Scenario_Frame.Navigate(typeof(Admin_Page));
                 Unchecked_All();
                 Admin_Service_Btn.IsChecked = true;
-            }
-            else { }
-        }
-
-        private void Function_1_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            if (Function_1_Btn.IsChecked == true)
-            {
-                //Scenario_Frame.Navigate(typeof(Page1_Info));
-                Unchecked_All();
-                Function_1_Btn.IsChecked = true;
             }
             else { }
         }
@@ -160,7 +149,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Info_Btn.IsChecked = false;
             Admin_Service_Btn.IsChecked = false;
             Control_Panel_Btn.IsChecked = false;
-            Function_1_Btn.IsChecked = false;
+            Auto_Mode_Btn.IsChecked = false;
             Function_2_Btn.IsChecked = false;
             Function_3_Btn.IsChecked = false;
             Function_4_Btn.IsChecked = false;
@@ -174,7 +163,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Info_Btn.IsEnabled = true;
             Admin_Service_Btn.IsEnabled = true;
             Control_Panel_Btn.IsEnabled = true;
-            Function_1_Btn.IsEnabled = true;
+            Auto_Mode_Btn.IsEnabled = true;
             Function_2_Btn.IsEnabled = true;
             Function_3_Btn.IsEnabled = true;
             Function_4_Btn.IsEnabled = true;
@@ -188,7 +177,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Info_Btn.IsEnabled = false;
             Admin_Service_Btn.IsEnabled = false;
             Control_Panel_Btn.IsEnabled = false;
-            Function_1_Btn.IsEnabled = false;
+            Auto_Mode_Btn.IsEnabled = false;
             Function_2_Btn.IsEnabled = false;
             Function_3_Btn.IsEnabled = false;
             Function_4_Btn.IsEnabled = false;
@@ -196,6 +185,17 @@ namespace Winky_Mobile_Test_Prototype_1
             Function_6_Btn.IsEnabled = false;
             Function_7_Btn.IsEnabled = false;
             Function_8_Btn.IsEnabled = false;
+        }
+
+        private void Auto_Mode_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (Auto_Mode_Btn.IsChecked == true)
+            {
+                Scenario_Frame.Navigate(typeof(Auto_Mode_Page));
+                Unchecked_All();
+                Auto_Mode_Btn.IsChecked = true;
+            }
+            else { }
         }
     }
 }
