@@ -129,6 +129,7 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
+    <Compile Include="AudioCapturePermissions.cs" />
     <Compile Include="Auto_Mode_Page.xaml.cs">
       <DependentUpon>Auto_Mode_Page.xaml</DependentUpon>
     </Compile>
@@ -142,6 +143,9 @@
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Shared_Data.cs" />
+    <Compile Include="Voice_Command_Page.xaml.cs">
+      <DependentUpon>Voice_Command_Page.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Welcome_Page.xaml.cs">
       <DependentUpon>Welcome_Page.xaml</DependentUpon>
     </Compile>
@@ -200,6 +204,8 @@
     <Content Include="Images\App_Icon.jpg" />
     <Content Include="Images\App_Icon.png" />
     <Content Include="Images\auto_mode.png" />
+    <Content Include="Images\auto_mode2.png" />
+    <Content Include="Images\auto_mode3.png" />
     <Content Include="Images\BLE.jpg" />
     <Content Include="Images\icon_sound.png" />
     <Content Include="Images\photoshop\100_100.png" />
@@ -238,6 +244,7 @@
     <Content Include="Images\Top_right.png" />
     <Content Include="Images\Two_head.png" />
     <None Include="Package.StoreAssociation.xml" />
+    <Content Include="Images\voice_command.png" />
     <Content Include="Images\Winky_Mobile.PNG" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
@@ -267,6 +274,10 @@
     <Page Include="MainPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Voice_Command_Page.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Welcome_Page.xaml">
       <SubType>Designer</SubType>

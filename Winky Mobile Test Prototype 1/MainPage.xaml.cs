@@ -67,17 +67,6 @@ namespace Winky_Mobile_Test_Prototype_1
             else { }
         }
 
-        private void Function_2_Btn_Click(object sender, RoutedEventArgs e)
-        {
-            if (Function_2_Btn.IsChecked == true)
-            {
-                //Scenario_Frame.Navigate(typeof(Page1_Info));
-                Unchecked_All();
-                Function_2_Btn.IsChecked = true;
-            }
-            else { }
-        }
-
         private void Function_3_Btn_Click(object sender, RoutedEventArgs e)
         {
             if (Function_3_Btn.IsChecked == true)
@@ -150,7 +139,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Admin_Service_Btn.IsChecked = false;
             Control_Panel_Btn.IsChecked = false;
             Auto_Mode_Btn.IsChecked = false;
-            Function_2_Btn.IsChecked = false;
+            Voice_Command_Btn.IsChecked = false;
             Function_3_Btn.IsChecked = false;
             Function_4_Btn.IsChecked = false;
             Function_5_Btn.IsChecked = false;
@@ -164,7 +153,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Admin_Service_Btn.IsEnabled = true;
             Control_Panel_Btn.IsEnabled = true;
             Auto_Mode_Btn.IsEnabled = true;
-            Function_2_Btn.IsEnabled = true;
+            Voice_Command_Btn.IsEnabled = true;
             Function_3_Btn.IsEnabled = true;
             Function_4_Btn.IsEnabled = true;
             Function_5_Btn.IsEnabled = true;
@@ -178,7 +167,7 @@ namespace Winky_Mobile_Test_Prototype_1
             Admin_Service_Btn.IsEnabled = false;
             Control_Panel_Btn.IsEnabled = false;
             Auto_Mode_Btn.IsEnabled = false;
-            Function_2_Btn.IsEnabled = false;
+            Voice_Command_Btn.IsEnabled = false;
             Function_3_Btn.IsEnabled = false;
             Function_4_Btn.IsEnabled = false;
             Function_5_Btn.IsEnabled = false;
@@ -194,6 +183,17 @@ namespace Winky_Mobile_Test_Prototype_1
                 Scenario_Frame.Navigate(typeof(Auto_Mode_Page));
                 Unchecked_All();
                 Auto_Mode_Btn.IsChecked = true;
+            }
+            else { }
+        }
+
+        private void Voice_Command_Btn_Click(object sender, RoutedEventArgs e)
+        {
+            if (Voice_Command_Btn.IsChecked == true)
+            {
+                Scenario_Frame.Navigate(typeof(Voice_Command_Page));
+                Unchecked_All();
+                Voice_Command_Btn.IsChecked = true;
             }
             else { }
         }

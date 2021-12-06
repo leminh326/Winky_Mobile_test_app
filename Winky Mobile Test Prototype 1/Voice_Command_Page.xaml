@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Winky_Mobile_Test_Prototype_1.Voice_Command_Page"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Winky_Mobile_Test_Prototype_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="645"  Width="910">
+
+    <Grid>
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,10,0,0" Text="Voice Command" TextWrapping="Wrap"  FontSize="60"/>
+        <Image HorizontalAlignment="Left" Height="386" Margin="38,143,0,0" VerticalAlignment="Top" Width="360" Source="/Images/voice_command.png" RenderTransformOrigin="0.495,0.562"/>
+        <TextBox x:Name="Result_Tbox" HorizontalAlignment="Left" Margin="455,232,0,0" Text="Waiting ..." TextWrapping="Wrap" VerticalAlignment="Top" Height="88" Width="265" FontSize="20" TextChanged="Result_Tbox_TextChanged"/>
+        <Button x:Name="Start_Command_Btn" Content="Start Command"       Height="74" Width="265" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="455,356,0,0" VerticalAlignment="Top" Click="Start_Command_Btn_Click" />
+        <ComboBox x:Name="Language_Selection_CBox"  Margin="462,586,0,0" Width="200" SelectionChanged="Language_Selection_CBox_SelectionChanged" Visibility="Collapsed"/>
+        <TextBlock HorizontalAlignment="Left" Margin="455,192,0,0" Text="Your Command" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30"/>
+        <TextBlock HorizontalAlignment="Left" Margin="462,541,0,0" Text="Language Selection" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="30" Visibility="Collapsed"/>
+    </Grid>
+</Page>

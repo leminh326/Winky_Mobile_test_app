@@ -9,7 +9,7 @@
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}" Height="645"  Width="910">
 
     <Grid>
-        <Image HorizontalAlignment="Left" Height="355" Margin="10,0,0,0" VerticalAlignment="Center" Width="380" Source="/Images/auto_mode.png"/>
+        <Image HorizontalAlignment="Left" Height="280" Margin="36,0,0,0" VerticalAlignment="Center" Width="336" Source="/Images/auto_mode3.png"/>
         <ToggleButton x:Name="Auto_Mode_Btn" Content="Begin Auto Mode"       Height="74" Width="265" Background="#538ED7" BorderBrush="Black" Foreground="White" BorderThickness="0.1,0.1,0.1,0.1" FontSize="28" IsEnabled="true" Margin="500,479,0,0" VerticalAlignment="Top" Click="Auto_Mode_Btn_Click"/>
         <TextBox x:Name="Power_Auto_Mode_Tbox" TextAlignment="Center" HorizontalAlignment="Left" Margin="467,352,0,0" Text="100" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="15" Width="66" Height="33" RenderTransformOrigin="0.5,0.5">
             <TextBox.RenderTransform>
